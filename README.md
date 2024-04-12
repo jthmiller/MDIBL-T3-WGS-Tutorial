@@ -6,8 +6,8 @@ The 'Metabarcoding' project option is [here](https://github.com/jthmiller/eDNA-m
 This repo is adapted from Dr. Joseph L Sevigny's [MDIBL-T3-WGS-Tutorial](https://github.com/Joseph7e/MDIBL-T3-WGS-Tutorial) to be a guide for the final projects for GEN711 students. 
 
 ### Helpful resources for this project:
-* [Getting Started](https://github.com/Joseph7e/MDIBL-T3-WGS-Tutorial#general-notes)  
-* [Joe's BASH Tutorials](https://github.com/Joseph7e/HCGS-BASH-tutorial) and [INBRE BASH Tutorials](https://geiselmed.dartmouth.edu/nhinbre/bioinformatics-modules/)
+* [Getting Started](https://github.com/jthmiller/MDIBL-T3-WGS-Tutorial#general-notes)  
+* [Joe's BASH Tutorials](https://github.com/jthmiller/HCGS-BASH-tutorial) and [INBRE BASH Tutorials](https://geiselmed.dartmouth.edu/nhinbre/bioinformatics-modules/)
 * [Reproducibility](https://github.com/ToniWestbrook/repeatfs)
 
 ## Overview of the Workflow
@@ -15,36 +15,36 @@ This repo is adapted from Dr. Joseph L Sevigny's [MDIBL-T3-WGS-Tutorial](https:/
 ![](img/diagram-WGS.png)
 
 ## Table of Contents
-* [Starting Data](https://github.com/Joseph7e/MDIBL-T3-WGS-Tutorial#starting-data) 
-* [Assessment of Sequencing Reads](https://github.com/Joseph7e/MDIBL-T3-WGS-Tutorial#sequencing-read-assessment)
-    * [FASTQ file format](https://github.com/Joseph7e/MDIBL-T3-WGS-Tutorial#fastq-file-format)
-    * [Read Quality Check](https://github.com/Joseph7e/MDIBL-T3-WGS-Tutorial#examine-read-quality) - w/FASTQC
-* [Adapter and Quality Trimming](https://github.com/Joseph7e/MDIBL-T3-WGS-Tutorial#adapter-and-quality-trimming) - w/Trimmomatic
-* [Genome Assembly](https://github.com/Joseph7e/MDIBL-T3-WGS-Tutorial#genome-assembly) - w/SPAdes
-    * [FASTA file format](https://github.com/Joseph7e/MDIBL-T3-WGS-Tutorial#fasta-format)
-* [Genome Assessment](https://github.com/Joseph7e/MDIBL-T3-WGS-Tutorial#genome-assessment)
-    * [Genome Structure (Contiguity)](https://github.com/Joseph7e/MDIBL-T3-WGS-Tutorial#genome-structure-assessment) - w/ QUAST
-    * [Expected Gene Content](https://github.com/Joseph7e/MDIBL-T3-WGS-Tutorial#Run BUSCO) - w/ BUSCO
-* [Genome Annotation](https://github.com/Joseph7e/MDIBL-T3-WGS-Tutorial#genome-annotation) w/PROKKA
-* [Identification of the Organism](https://github.com/Joseph7e/MDIBL-T3-WGS-Tutorial#organism-identification)
-    * [BLAST](https://github.com/Joseph7e/MDIBL-T3-WGS-Tutorial#blast)
-* [Read Mapping](https://github.com/Joseph7e/MDIBL-T3-WGS-Tutorial#read-mapping) w/BWA and Samtools
-* [Filtering the Genome Assembly](https://github.com/Joseph7e/MDIBL-T3-WGS-Tutorial#non-target-contig-removal) w/Blobtools
-* [What's Next?](https://github.com/Joseph7e/MDIBL-T3-WGS-Tutorial#afterthoughts)
-    * [Genome Visualization](https://github.com/Joseph7e/MDIBL-T3-WGS-Tutorial#genome-visualization)
-    * [Submission to NCBI](https://github.com/Joseph7e/MDIBL-T3-WGS-Tutorial)
-    * [Comparative Genomics](https://github.com/Joseph7e/HCGS-Comparative-Genomics)
+* [Starting Data](https://github.com/jthmiller/MDIBL-T3-WGS-Tutorial#starting-data) 
+* [Assessment of Sequencing Reads](https://github.com/jthmiller/MDIBL-T3-WGS-Tutorial#sequencing-read-assessment)
+    * [FASTQ file format](https://github.com/jthmiller/MDIBL-T3-WGS-Tutorial#fastq-file-format)
+    * [Read Quality Check](https://github.com/jthmiller/MDIBL-T3-WGS-Tutorial#examine-read-quality) - w/FASTQC
+* [Adapter and Quality Trimming](https://github.com/jthmiller/MDIBL-T3-WGS-Tutorial#adapter-and-quality-trimming) - w/Trimmomatic
+* [Genome Assembly](https://github.com/jthmiller/MDIBL-T3-WGS-Tutorial#genome-assembly) - w/SPAdes
+    * [FASTA file format](https://github.com/jthmiller/MDIBL-T3-WGS-Tutorial#fasta-format)
+* [Genome Assessment](https://github.com/jthmiller/MDIBL-T3-WGS-Tutorial#genome-assessment)
+    * [Genome Structure (Contiguity)](https://github.com/jthmiller/MDIBL-T3-WGS-Tutorial#genome-structure-assessment) - w/ QUAST
+    * [Expected Gene Content](https://github.com/jthmiller/MDIBL-T3-WGS-Tutorial#Run BUSCO) - w/ BUSCO
+* [Genome Annotation](https://github.com/jthmiller/MDIBL-T3-WGS-Tutorial#genome-annotation) w/PROKKA
+* [Identification of the Organism](https://github.com/jthmiller/MDIBL-T3-WGS-Tutorial#organism-identification)
+    * [BLAST](https://github.com/jthmiller/MDIBL-T3-WGS-Tutorial#blast)
+* [Read Mapping](https://github.com/jthmiller/MDIBL-T3-WGS-Tutorial#read-mapping) w/BWA and Samtools
+* [Filtering the Genome Assembly](https://github.com/jthmiller/MDIBL-T3-WGS-Tutorial#non-target-contig-removal) w/Blobtools
+* [What's Next?](https://github.com/jthmiller/MDIBL-T3-WGS-Tutorial#afterthoughts)
+    * [Genome Visualization](https://github.com/jthmiller/MDIBL-T3-WGS-Tutorial#genome-visualization)
+    * [Submission to NCBI](https://github.com/jthmiller/MDIBL-T3-WGS-Tutorial)
+    * [Comparative Genomics](https://github.com/jthmiller/HCGS-Comparative-Genomics)
  
 ## Starting Data:
 
 Isolate Bacteria            |  Extract DNA
 :-------------------------:|:-------------------------:
-![alt text](https://github.com/Joseph7e/HCGS-Genomics-Tutorial/blob/master/petri.jpg?raw=true)  |  <img src="https://www.cephamls.com/wp-content/uploads/2019/02/DNA-Extraction-Figure-3-22.jpg" width="420">
-<img src="https://github.com/Joseph7e/HCGS-Genomics-Tutorial/blob/master/fragmentation3.png?raw=true" width="800">
+![alt text](https://github.com/jthmiller/HCGS-Genomics-Tutorial/blob/master/petri.jpg?raw=true)  |  <img src="https://www.cephamls.com/wp-content/uploads/2019/02/DNA-Extraction-Figure-3-22.jpg" width="420">
+<img src="https://github.com/jthmiller/HCGS-Genomics-Tutorial/blob/master/fragmentation3.png?raw=true" width="800">
 
 Prepare Library           |  Sequence DNA
 :-------------------------:|:-------------------------:
-<img src="https://jef.works//assets/blog/librarystructure.png" width="520">  |  <img src="https://github.com/Joseph7e/HCGS-Genomics-Tutorial/blob/master/hiseq.png?raw=true" width="320">
+<img src="https://jef.works//assets/blog/librarystructure.png" width="520">  |  <img src="https://github.com/jthmiller/HCGS-Genomics-Tutorial/blob/master/hiseq.png?raw=true" width="320">
 
 ## How NGS sequencing works
 [![sequencing by synthesis](img/youtube-video-sequencing.PNG)](https://www.youtube.com/watch?v=p4vKJJlNTKA&t=9s "Sequencing")
