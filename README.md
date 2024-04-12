@@ -1,6 +1,10 @@
-# Gen 711/811 Group Projects: Genome Assebly and Evaluation
+# Gen 711/811 Group Projects, Option 1: Genome Assebly and Evaluation
 
-This repo is adapted from Dr. Joseph L Sevigny's [MDIBL-T3-WGS-Tutorial](https://github.com/Joseph7e/MDIBL-T3-WGS-Tutorial)
+This repo is adapted from Dr. Joseph L Sevigny's [MDIBL-T3-WGS-Tutorial](https://github.com/Joseph7e/MDIBL-T3-WGS-Tutorial) to be a guide for the final projects for GEN711 students. Final Projects will be graded from each groups's github repo. [Here](https://github.com/Kale-23/Qiime2_Microbiome_Analysis) is an example of a project that recieved full credit. 
+
+
+
+
 
 ### Helpful resources for this project:
 * [Getting Started](https://github.com/Joseph7e/MDIBL-T3-WGS-Tutorial#general-notes)  
