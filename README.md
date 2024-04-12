@@ -52,12 +52,14 @@ Prepare Library           |  Sequence DNA
 Your starting data is found within a shared directory within your group folder (one directory level up). To start we will move a set of Sample data into your home directories. Each of these samples represent the genome of a unique and novel microbe that has not been seen before (except by me). Inside this directory are Illumina HiSeq 2500, paired-end, 250 bp sequencing reads. Looking in this directory you should see two files per sample, the forward and reverse reads. These files are in **FASTQ** format (see below).
 
 
-## Copy
+## Copy two sets of fastqs to your home directory 
+Pick any two other than this example. Here, we copy over:HA12_S43_L001_R1_001.fastq.gz,HA12_S43_L001_R2_001.fastq.gz,RB2_S44_L001_R1_001.fastq.gz, and RB2_S44_L001_R2_001.fastq.gz.
 
 ```bash
-cp -r ../shared/Project_X/ Sample_X/ ./
+cp -r /tmp/gen711_project_data/genome-assembly-fqs/HA12* ./
+cp -r /tmp/gen711_project_data/genome-assembly-fqs/RB2* ./
 # confirm the copy arrived (remember ‘*’ will match any character/string)
-ls Sample_*/
+ls
 ```
 
 [Link explaining the 'Read Name Format'](http://support.illumina.com/content/dam/illumina-support/help/BaseSpaceHelp_v2/Content/Vault/Informatics/Sequencing_Analysis/BS/swSEQ_mBS_FASTQFiles.htm): SampleName_Barcode_LaneNumber_001.fastq.gz
