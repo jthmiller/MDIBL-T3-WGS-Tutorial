@@ -70,12 +70,19 @@ It is a good idea to keep your directories tidy and to name your files something
 
 ```bash
 # Make a new directory and add the Sample directory into it
-mkdir powered-wgs-tutorial
-mv Sample* powered-wgs-tutorial/
-cd powered-wgs-tutorial/
+mkdir my-project
+mv Sample* my-project/
+cd my-project/
 # make the sample directory name more meaningful
 mv Sample_X Sample_X-raw_reads
 ```
+
+Be sure to save all the commands (in a shell script text file) that are necessary for re-running your analysis. Therefor, one of your first lines in this script should be:
+```
+mkdir my-project
+```
+However, you will not need to save the 'ls Sample_*/' command, because that doesn't make/modify any files- it just confirms that it ran correctly. 
+
 
 ## Activate the genomics environment
 This is important and ensures that all the programs we use are updates and in working order. You'll need to do this everytime you login to the server.
