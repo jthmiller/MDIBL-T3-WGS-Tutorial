@@ -307,7 +307,7 @@ mv contigs.fasta spades.log ../
 ls ../
 # confirm you are still in the spades_directory (I'm paranoid)
 pwd
-# you should see something like /home/GROUP/UserName/mdibl-t3-2018-WGS/spades_directory_default/
+# you should see something like /home/GROUP/UserName/gen711/spades_directory_default/
 # After you confirm the files have been moved and you are in the right directory, delete the unwanted files
 rm -r *
 # move the files back
@@ -604,10 +604,10 @@ I am going to take this one step at a time and construct a final contig list one
 
 ```bash
 # make a directory for filtering
-mkdir ~/mdibl-t3-2018-WGS/filtered_assembly
-cd ~/mdibl-t3-2018-WGS/filtered_assembly
+mkdir ~/gen711/filtered_assembly
+cd ~/gen711/filtered_assembly
 # copy the taxonomy table
-cp ~/~/mdibl-t3-2018-WGS/blob_taxonomy.blob_out.blobDB.table.txt ./
+cp ~/~/gen711/blob_taxonomy.blob_out.blobDB.table.txt ./
 # Filter by length
 grep -v '#' blob_taxonomy.blob_out.blobDB.table.txt | awk -F'\t' '$2 > 500' | tabview -
 # You can always do the opposite to examine what you are losing, do this every time
