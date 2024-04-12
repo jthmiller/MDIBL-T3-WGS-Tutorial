@@ -1,16 +1,18 @@
-# MDIBL-T3-WGS-Tutorial
-Whole-Genome Assembly and Assessment Tutorial
+# Gen 711/811 Group Projects: Genome Assebly and Evaluation
+
+This repo is adapted from Dr. Joseph L Sevigny's [MDIBL-T3-WGS-Tutorial](https://github.com/Joseph7e/MDIBL-T3-WGS-Tutorial)
+
+### Helpful resources for this project:
+* [Getting Started](https://github.com/Joseph7e/MDIBL-T3-WGS-Tutorial#general-notes)  
+* [Joe's BASH Tutorials](https://github.com/Joseph7e/HCGS-BASH-tutorial) and [INBRE BASH Tutorials](https://geiselmed.dartmouth.edu/nhinbre/bioinformatics-modules/)
+* [Reproducibility](https://github.com/ToniWestbrook/repeatfs)
 
 ## Overview of the Workflow
 
 ![](img/diagram-WGS.png)
 
 ## Table of Contents
-
-* [Getting Started](https://github.com/Joseph7e/MDIBL-T3-WGS-Tutorial#general-notes)  
-    * [Joe's BASH Tutorials](https://github.com/Joseph7e/HCGS-BASH-tutorial) and [INBRE BASH Tutorials](https://geiselmed.dartmouth.edu/nhinbre/bioinformatics-modules/)
-    * [Reproducibility](https://github.com/ToniWestbrook/repeatfs)
-    * [Starting Data](https://github.com/Joseph7e/MDIBL-T3-WGS-Tutorial#starting-data) 
+* [Starting Data](https://github.com/Joseph7e/MDIBL-T3-WGS-Tutorial#starting-data) 
 * [Assessment of Sequencing Reads](https://github.com/Joseph7e/MDIBL-T3-WGS-Tutorial#sequencing-read-assessment)
     * [FASTQ file format](https://github.com/Joseph7e/MDIBL-T3-WGS-Tutorial#fastq-file-format)
     * [Read Quality Check](https://github.com/Joseph7e/MDIBL-T3-WGS-Tutorial#examine-read-quality) - w/FASTQC
@@ -30,27 +32,6 @@ Whole-Genome Assembly and Assessment Tutorial
     * [Submission to NCBI](https://github.com/Joseph7e/MDIBL-T3-WGS-Tutorial)
     * [Comparative Genomics](https://github.com/Joseph7e/HCGS-Comparative-Genomics)
  
-
-google sheet
-https://docs.google.com/spreadsheets/d/1auOfzSoYiHQIOrlcN3kZyKBPTjy1fbPiSClNuAKzdJ8/edit?usp=sharing
-
-shared presentation
-https://docs.google.com/presentation/d/1OBzO8tTlOovftlic2hYZ7EWInaVoaPCbp_dOabNGVWY/edit?usp=sharing
-
-## General Notes:
-**For each program that we run in this tutorial I have provided a link to the manual**. These manuals provide a thorough explanation of what exactly we are doing. Before running the program it is a good idea to skim through these, examine the options, and see what it does. It is also a good idea to check out the publication associated with the program. Please note that the commands we run are general and usually executed with default settings. This works great for most genomes but the options may need to be tweaked depending on your genome. Before you run any command it is also a great idea to look at the programs help menu. This can usually be done with the name of the program followed by '-h' or '-help' or '--help'. i.e. 'spades -h'. Also ... never forget about google for quick answers to any confusion.
-
-
-Throughout this tutorial the commands you will type are formatted into the gray text boxes (don't do it when learning but they can be faithfully copied and pasted). The '#' symbol indicates a comment, BASH knows to ignore these lines. 
-
-
-This tutorial assumes a general understanding of the BASH environment. **You should be familiar with moving around the directories and understand how to manipulate files**.
-
-See the BASH tutorial and primers to get started. https://github.com/Joseph7e/HCGS-BASH-tutorial
-
-**Remember to tab complete!** There is a reason the tab is my favorite key. It prevents spelling errors and allows you to work much faster. Remember if a filename isn't auto-completing you can hit tab twice to see your files while you continue typing your command. If a file doesn't auto-complete it means you either have a spelling mistake, are in a different directory than you originally thought, or that it doesn't exist.
-
-
 ## Starting Data:
 
 Isolate Bacteria            |  Extract DNA
@@ -68,26 +49,9 @@ Prepare Library           |  Sequence DNA
 Your starting data is found within a shared directory within your group folder (one directory level up). To start we will move a set of Sample data into your home directories. Each of these samples represent the genome of a unique and novel microbe that has not been seen before (except by me). Inside this directory are Illumina HiSeq 2500, paired-end, 250 bp sequencing reads. Looking in this directory you should see two files per sample, the forward and reverse reads. These files are in **FASTQ** format (see below).
 
 
-## Get your bearing on the server.
-
-It's hard to know where your going if you don't know where you are. When I am working on the server I constantly type 'ls' and 'pwd' to make sure I am where I think I am. You should too!
+## Copy
 
 ```bash
-# print your current working directory. If you just logged in you should be in your home directory (/home/group/username/)
-pwd
-# change to your home directory in case you weren't already there. Remember ~/ is an absolute path to your home directory.
-cd ~/
-# ls to view your home dir
-ls
-# ls to view the group directory (I type ‘ls’ a lot!)
-ls ../
-# view the shared directory of starting data
-ls ../shared
-# View the shared project with the ‘tree’ command
-tree ../shared
-# Copy a sample from the shared directory to your home dir, 
-#“Project_X”, where X denotes the Project name and "Sample_X" (where X denotes your sample name).
-# USE AUTOCOMPLETE
 cp -r ../shared/Project_X/ Sample_X/ ./
 # confirm the copy arrived (remember ‘*’ will match any character/string)
 ls Sample_*/
@@ -95,9 +59,7 @@ ls Sample_*/
 
 [Link explaining the 'Read Name Format'](http://support.illumina.com/content/dam/illumina-support/help/BaseSpaceHelp_v2/Content/Vault/Informatics/Sequencing_Analysis/BS/swSEQ_mBS_FASTQFiles.htm): SampleName_Barcode_LaneNumber_001.fastq.gz
 
-
 Important note: In the above command I use the "\*" character to view the Sample directory, I would normally just type out the entire path using tab complete (which is what you should do). This wildcard will match any string of characters. I use this because everyone will have a different Sample name. To make this tutorial as general as possible I need to use these wildcards throughout the tutorial. In addition I may use Sample_X instead of Sample_\*. In these cases be sure to type out your complete sample name!, the wildcards probably won't work 
-
 
 * Prepare your working directory
 
