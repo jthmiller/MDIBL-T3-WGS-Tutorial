@@ -7,7 +7,7 @@ This repo is adapted from Dr. Joseph L Sevigny's [MDIBL-T3-WGS-Tutorial](https:/
 
 ### Helpful resources for this project:
 * [Getting Started](https://github.com/jthmiller/MDIBL-T3-WGS-Tutorial#general-notes)  
-* [Joe's BASH Tutorials](https://github.com/jthmiller/HCGS-BASH-tutorial) and [INBRE BASH Tutorials](https://geiselmed.dartmouth.edu/nhinbre/bioinformatics-modules/)
+* [Joe's BASH Tutorials](https://github.com/Joseph7e/HCGS-BASH-tutorial) and [INBRE BASH Tutorials](https://geiselmed.dartmouth.edu/nhinbre/bioinformatics-modules/)
 * [Reproducibility](https://github.com/ToniWestbrook/repeatfs)
 
 ## Overview of the Workflow
@@ -39,12 +39,12 @@ This repo is adapted from Dr. Joseph L Sevigny's [MDIBL-T3-WGS-Tutorial](https:/
 
 Isolate Bacteria            |  Extract DNA
 :-------------------------:|:-------------------------:
-![alt text](https://github.com/jthmiller/HCGS-Genomics-Tutorial/blob/master/petri.jpg?raw=true)  |  <img src="https://www.cephamls.com/wp-content/uploads/2019/02/DNA-Extraction-Figure-3-22.jpg" width="420">
-<img src="https://github.com/jthmiller/HCGS-Genomics-Tutorial/blob/master/fragmentation3.png?raw=true" width="800">
+![alt text](https://github.com/Joseph7e/HCGS-Genomics-Tutorial/blob/master/petri.jpg?raw=true)  |  <img src="https://www.cephamls.com/wp-content/uploads/2019/02/DNA-Extraction-Figure-3-22.jpg" width="420">
+<img src="https://github.com/Joseph7e/HCGS-Genomics-Tutorial/blob/master/fragmentation3.png?raw=true" width="800">
 
 Prepare Library           |  Sequence DNA
 :-------------------------:|:-------------------------:
-<img src="https://jef.works//assets/blog/librarystructure.png" width="520">  |  <img src="https://github.com/jthmiller/HCGS-Genomics-Tutorial/blob/master/hiseq.png?raw=true" width="320">
+<img src="https://jef.works//assets/blog/librarystructure.png" width="520">  |  <img src="https://github.com/Joseph7e/HCGS-Genomics-Tutorial/blob/master/hiseq.png?raw=true" width="320">
 
 ## How NGS sequencing works
 [![sequencing by synthesis](img/youtube-video-sequencing.PNG)](https://www.youtube.com/watch?v=p4vKJJlNTKA&t=9s "Sequencing")
