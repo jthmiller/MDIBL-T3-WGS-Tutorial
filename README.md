@@ -179,7 +179,7 @@ On filezilla you will need to enter the same server information when you login f
 readlink -f fastqc_raw-reads/*.html
 # copy those paths, we will use them for the file transfer
 # In a fresh terminal on OSX, Linux, or BASH for windows
-scp USERNAME@ron.sr.unh.edu:/home/GROUP/USERNAME/mdibl-t3-2019-WGS/fastqc_raw-reads/*.html /path/to/put/files
+scp USERNAME@ron.sr.unh.edu:/home/GROUP/USERNAME/gen711/fastqc_raw-reads/*.html /path/to/put/files
 ```
 
 * Transfer resulting HTML files to computer using filezilla or with the command line on OSX/Linux.
@@ -191,7 +191,7 @@ On filezilla you will need to enter the same server information when you login f
 readlink -f fastqc_raw-reads/*.html
 # copy those paths, we will use them for the file transfer
 # In a fresh terminal on OSX, Linux, or BASH for windows
-scp USERNAME@ron.sr.unh.edu:/home/GROUP/USERNAME/mdibl-t3-2019-WGS/fastqc_raw-reads/*.html /path/to/put/files
+scp USERNAME@ron.sr.unh.edu:/home/GROUP/USERNAME/gen711/fastqc_raw-reads/*.html /path/to/put/files
 ```
 
 ## Adapter and Quality Trimming
