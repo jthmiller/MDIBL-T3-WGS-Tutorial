@@ -1,10 +1,9 @@
 # Gen 711/811 Group Projects, Option 1: Genome Assebly and Evaluation
-
-This repo is adapted from Dr. Joseph L Sevigny's [MDIBL-T3-WGS-Tutorial](https://github.com/Joseph7e/MDIBL-T3-WGS-Tutorial) to be a guide for the final projects for GEN711 students. Final Projects will be graded from each groups's github repo. [Here](https://github.com/Kale-23/Qiime2_Microbiome_Analysis) is an example of a project that recieved full credit. [Here](https://github.com/jthmiller/gen711-811-example) is a general template to follow. In your repo, be sure to include a file (such as 'analysis.sh') that documents each command you used for the project. 
+Final Projects will be graded from each groups's github repo. [Here](https://github.com/Kale-23/Qiime2_Microbiome_Analysis) is an example of a project that recieved full credit. [Here](https://github.com/jthmiller/gen711-811-example) is a general template to follow. In your repo, be sure to include a file (such as 'analysis.sh') that documents each command you used for the project. 
 
 The 'Metabarcoding' project option is [here](https://github.com/jthmiller/eDNA-metabarcoding-intro/tree/Gen711-811)
 
-
+This repo is adapted from Dr. Joseph L Sevigny's [MDIBL-T3-WGS-Tutorial](https://github.com/Joseph7e/MDIBL-T3-WGS-Tutorial) to be a guide for the final projects for GEN711 students. 
 
 ### Helpful resources for this project:
 * [Getting Started](https://github.com/Joseph7e/MDIBL-T3-WGS-Tutorial#general-notes)  
